@@ -17,7 +17,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 RPROMPT='$(rvm_gemset)[$(rvm_prompt)]'
 
 function rvm_gemset {
-  if [[ $(rvm_prompt gemset) -eq '' && -e 'Gemfile' ]]
+  if [[ $(rvm_prompt gemset) == '' && -e 'Gemfile' ]]
   then echo "%{$fg[red]%}[Gemfile present but no RVM gemset]%{$reset_color%}"
   fi
 }
