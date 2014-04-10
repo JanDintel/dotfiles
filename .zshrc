@@ -14,6 +14,7 @@ RPROMPT='[`~/.rvm/bin/rvm-prompt`]'
 
 # General aliases
 alias zshconfig='subl ~/.zshrc'
+alias grep='grep --colour=always'
 
 # Git aliases
 alias st='git status'
