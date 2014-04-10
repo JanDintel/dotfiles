@@ -1,0 +1,30 @@
+# Global gitignore by JanDintel
+#
+# Place the file in ~/.gitignore_global
+#
+
+# OS X files
+*~
+.DS_Store
+
+# Log files
+log/*.log
+
+# Temporary files
+tmp/*
+temp/*
+
+# Sensitive information
+credentials.yml
+auth.yml
+secrets.yml
+
+# Applications
+## Vagrant
+.vagrant
+
+## Redis
+dump.rdb
+
+## RCov and SimpleCov
+coverage/*
