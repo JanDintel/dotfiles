@@ -13,8 +13,10 @@ ZSH_THEME="jandintel"
 RPROMPT='[`~/.rvm/bin/rvm-prompt`]'
 
 # General aliases
-alias zshconfig='subl ~/.zshrc'
+alias reload!='. ~/.zshrc'
 alias grep='grep --colour=always'
+alias zshconfig='subl ~/.zshrc'
+alias ohmyzsh='subl ~/.oh-my-zsh'
 
 # Git aliases
 alias st='git status'
@@ -30,6 +32,8 @@ alias rdm='rake db:migrate'
 alias rdmt='rake db:migrate RAILS_ENV=test'
 alias rdr='rake db:reset'
 alias rdrt='rake db:reset RAILS_ENV=test'
+alias rdrh='rake db:drop; rake db:create; rake db:migrate'
+alias rdrht='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test'
 
 # Set how often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=3
