@@ -13,6 +13,7 @@ ZSH_THEME="jandintel"
 RPROMPT='[`~/.rvm/bin/rvm-prompt`]'
 
 # General aliases
+alias reload!='. ~/.zshrc'
 alias zshconfig='subl ~/.zshrc'
 alias ohmyzsh='subl ~/.oh-my-zsh'
 
