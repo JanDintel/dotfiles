@@ -2,8 +2,8 @@
 
 set -e
 
-source 'bin/echo_helper.sh'
-source 'bin/file_helper.sh'
+source 'script/echo_helper.sh'
+source 'script/file_helper.sh'
 
 FILE_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 REPO_DIR="$(cd $FILE_DIR && cd .. && pwd)"
