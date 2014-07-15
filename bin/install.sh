@@ -47,7 +47,7 @@ install_dotfiles() {
   for source_dotfile in $source_dotfiles; do
     destination_dotfile="$HOME/.$(basename "${source_dotfile%.*}")"
 
-    link_file "$source_dotfile" "$destination_dotfile"
+    link_file $source_dotfile $destination_dotfile
   done
 }
 
