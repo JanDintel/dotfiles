@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-# set -x
 
 source 'bin/echo_helper.sh'
 source 'bin/file_helper.sh'
