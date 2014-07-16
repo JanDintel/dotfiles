@@ -2,7 +2,7 @@
 
 Install dotfiles on your OS X workstation. Inspriration from [holman does dotfiles by Holman](https://github.com/holman/dotfiles).
 
-*Note:* This project is extremly powerfull in combination with the [Workstation](https://github.com/JanDintel/workstation) project for setting up your development environment.
+**Note:** This project is extremly powerfull in combination with the [Workstation](https://github.com/JanDintel/workstation) project for setting up your development environment.
 
 ## Requirements
 
