@@ -37,3 +37,5 @@ The dotfiles are split up per 'topic' or 'catagory', which is just a directory. 
 However some dotfiles are a bit special, these exsist in a special directory:
 
 - `./bin/*`: Any file in `./bin/` will get added to your `$PATH` and be made available everywhere (e.g. `subl`)
+
+The dotfiles allow to set up project aliases, these aliases are automatically loaded into your shell. To enable a project alias, create a `.alias` file in the project directory.
