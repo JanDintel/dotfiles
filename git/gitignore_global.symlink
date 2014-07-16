@@ -23,3 +23,6 @@ dump.rdb
 
 ## RCov and SimpleCov
 coverage/*
+
+# Alias references
+.alias
