@@ -1,5 +1,5 @@
 # Aliases for projects
-project_aliases=($(find -P "$PROJECTS" -maxdepth 3 -name '*.alias'))
+project_aliases=($(find -P "$PROJECTS" -maxdepth 4 -name '*.alias'))
 
 for project_alias in $project_aliases; do
   project_dir=$(dirname $project_alias)
