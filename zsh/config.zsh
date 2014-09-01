@@ -7,4 +7,4 @@ ZSH_THEME="jandintel"
 RPROMPT="[`~/.rvm/bin/rvm-prompt`]"
 
 # Auto-update
-export UPDATE_ZSH_DAYS=3
+export UPDATE_ZSH_DAYS=6
