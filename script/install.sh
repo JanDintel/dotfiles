@@ -55,7 +55,7 @@ main() {
   show_introduction
 
   symlink_dotfiles_to_home_directory
-  
+
   install_zsh_themes
   install_dotfiles
 }
