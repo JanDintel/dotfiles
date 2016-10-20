@@ -6,5 +6,8 @@ alias rdrt='rake db:reset RAILS_ENV=test'
 alias rdrh='rake db:drop; rake db:create; rake db:migrate'
 alias rdrht='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test'
 
+alias rc='rails console'
+alias rrc='ruby ~/.ssh_rails_console'
+
 # Aliases for Bundler
 alias be='bundle exec'
