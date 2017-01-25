@@ -22,6 +22,12 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
  source "$HOME/.rvm/scripts/rvm"
 fi
 
+# Add Java (JDK) to PATH
+if [[ -s "/usr/libexec/java_home" ]]; then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+  export PATH="$PATH:$JAVA_HOME/bin"
+fi
+
 # Add Android SDK tools to PATH (e.g. used for React native)
 if [[ -d "$HOME/Library/Android/sdk" ]]; then
   export ANDROID_HOME="$HOME/Library/Android/sdk"
