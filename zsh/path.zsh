@@ -18,9 +18,9 @@ if [[ -d "$HOME/.rvm/bin" ]]; then
 fi
 
 # Load RVM into shell as a function for scripting (e.g. display current version and gemset)
-# if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-#  source "$HOME/.rvm/scripts/rvm"
-# fi
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+ source "$HOME/.rvm/scripts/rvm"
+fi
 
 # Add Android SDK tools to PATH (e.g. used for React native)
 if [[ -d "$HOME/Library/Android/sdk" ]]; then
