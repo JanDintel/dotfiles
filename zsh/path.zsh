@@ -12,5 +12,19 @@
 # Load ZSH into PATH
 export PATH="./bin:/usr/local/bin:/usr/local/sbin:$DOTFILES/bin:$PATH"
 
-# Load RVM into PATH as a function (for scripting)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Add RVM to PATH
+if [[ -d "$HOME/.rvm/bin" ]]; then
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
+
+# Load RVM into shell as a function for scripting (e.g. display current version and gemset)
+# if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+#  source "$HOME/.rvm/scripts/rvm"
+# fi
+
+# Add Android SDK tools to PATH (e.g. used for React native)
+if [[ -d "$HOME/Library/Android/sdk" ]]; then
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+  export PATH="$PATH:$ANDROID_HOME/tools"
+  export PATH="$PATH:$ANDROID_HOME/platform-tools"
+fi
