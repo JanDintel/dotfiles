@@ -39,3 +39,6 @@ unset configuration_files
 
 # Load original dotfiles (must be loaded on end of file)
 source $ZSH/oh-my-zsh.sh
+
+# Load kubectl autocomplete
+source <(kubectl completion zsh)
