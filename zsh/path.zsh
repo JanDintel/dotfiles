@@ -12,25 +12,24 @@
 # Load ZSH into PATH
 export PATH="./bin:/usr/local/bin:/usr/local/sbin:$DOTFILES/bin:$PATH"
 
-# Add RVM to PATH
-if [[ -d "$HOME/.rvm/bin" ]]; then
-  export PATH="$PATH:$HOME/.rvm/bin"
-fi
+# ruby-build installs a non-Homebrew OpenSSL for each Ruby version installed and these are never upgraded.
+#
+# To link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded) add the following
+# to your ~/.zshrc:
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-# Load RVM into shell as a function for scripting (e.g. display current version and gemset)
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
- source "$HOME/.rvm/scripts/rvm"
-fi
+# Load rbenv automatically by appending the following to ~/.zshrc:
+eval "$(rbenv init -)"
 
-# Add Java (JDK) to PATH
-if [[ -s "/usr/libexec/java_home" ]]; then
-  export JAVA_HOME=$(/usr/libexec/java_home)
-  export PATH="$PATH:$JAVA_HOME/bin"
-fi
-
-# Add Android SDK tools to PATH (e.g. used for React native)
-if [[ -d "$HOME/Library/Android/sdk" ]]; then
-  export ANDROID_HOME="$HOME/Library/Android/sdk"
-  export PATH="$PATH:$ANDROID_HOME/tools"
-  export PATH="$PATH:$ANDROID_HOME/platform-tools"
-fi
+# # Add Java (JDK) to PATH
+# if [[ -s "/usr/libexec/java_home" ]]; then
+#   export JAVA_HOME=$(/usr/libexec/java_home)
+#   export PATH="$PATH:$JAVA_HOME/bin"
+# fi
+#
+# # Add Android SDK tools to PATH (e.g. used for React native)
+# if [[ -d "$HOME/Library/Android/sdk" ]]; then
+#   export ANDROID_HOME="$HOME/Library/Android/sdk"
+#   export PATH="$PATH:$ANDROID_HOME/tools"
+#   export PATH="$PATH:$ANDROID_HOME/platform-tools"
+# fi

@@ -41,4 +41,4 @@ unset configuration_files
 source $ZSH/oh-my-zsh.sh
 
 # Load kubectl autocomplete
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
