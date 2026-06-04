@@ -22,20 +22,20 @@ symlink_dotfiles_to_home_directory() {
   fi
 }
 
-#install_zsh_themes() {
-#  warning_echo "Installing ZSH theme..."
-#
-#  local overwrite_all=false backup_all=false skip_all=false
-#
-#  source_zsh_themes=$(find -L "$DOTFILES_DIR/zsh/themes" -maxdepth 2 -name '*.zsh-theme')
-#
-#  for source_zsh_theme in $source_zsh_themes; do
-#    basename_zsh_theme=$(basename $source_zsh_theme)
-#    destination_zsh_theme="$HOME/.oh-my-zsh/themes/$basename_zsh_theme"
-#
-#    link_file $source_zsh_theme $destination_zsh_theme
-#  done
-#}
+install_zsh_themes() {
+  warning_echo "Installing ZSH theme..."
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  source_zsh_themes=$(find -L "$DOTFILES_DIR/zsh/themes" -maxdepth 2 -name '*.zsh-theme')
+
+  for source_zsh_theme in $source_zsh_themes; do
+    basename_zsh_theme=$(basename $source_zsh_theme)
+    destination_zsh_theme="$HOME/.oh-my-zsh/themes/$basename_zsh_theme"
+
+    link_file $source_zsh_theme $destination_zsh_theme
+  done
+}
 
 install_dotfiles() {
   warning_echo "Installing dotfiles..."
@@ -62,8 +62,9 @@ main() {
 
   symlink_dotfiles_to_home_directory
 
-  install_zsh_themes
+#  install_zsh_themes
   install_dotfiles
+  install_packages
 }
 
 main
