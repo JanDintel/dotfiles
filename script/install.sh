@@ -57,6 +57,13 @@ install_packages() {
   brew bundle --file "$DOTFILES_DIR/packages/Brewfile"
 }
 
+install_runtimes() {
+	warning_echo "Installing runtimes..."
+  
+  source "$DOTFILES_DIR/packages/tool-plugins.sh"
+  asdf install
+}
+
 main() {
   show_introduction
 
@@ -65,6 +72,7 @@ main() {
 #  install_zsh_themes
   install_dotfiles
   install_packages
+  install_runtimes
 }
 
 main
