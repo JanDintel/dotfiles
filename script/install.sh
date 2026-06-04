@@ -51,6 +51,12 @@ install_dotfiles() {
   done
 }
 
+install_packages() {
+  warning_echo "Installing packages..."
+
+  brew bundle --file "$DOTFILES_DIR/packages/Brewfile"
+}
+
 main() {
   show_introduction
 

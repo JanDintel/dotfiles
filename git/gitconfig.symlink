@@ -1,0 +1,17 @@
+[user]
+	name = Jan van der Pas
+	email = jan.vanderpas@beequip.nl
+[core]
+	editor = mate -w
+	excludesfile = /Users/janvanderpas/.gitignore_global
+[alias]
+	co = checkout
+	com = commit
+	br = branch
+	ci = commit
+	st = status
+	up = pull --rebase --autostash
+[pack]
+	windowMemory = 512m
+[pull]
+	rebase = true

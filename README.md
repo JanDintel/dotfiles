@@ -1,8 +1,6 @@
 # dotfiles
 
-Install dotfiles on your OS X workstation. Inspriration from [holman does dotfiles by Holman](https://github.com/holman/dotfiles).
-
-**Note:** This project is extremly powerfull in combination with the [Workstation](https://github.com/JanDintel/workstation) project for setting up your development environment.
+Install dotfiles on your MacOS workstation. Inspiration from [holman does dotfiles by Holman](https://github.com/holman/dotfiles).
 
 ## Requirements
 
@@ -26,16 +24,15 @@ The installation script works as follows:
 
 ## Usage
 
-The dotfiles are split up per 'topic' or 'catagory', which is just a directory. The extension on the dotfile decides how the file is handeld:
+The dotfiles are split up per 'topic' or 'category', which is just a directory. The extension on the dotfile decides how the file is handled:
 
 - `*.zsh`: File will get automatically loaded into your shell
 - `*.symlink`: File will get symlinked to the `$HOME` directory
-- `path.zsh`: File will be loaded first and is expected to setup `$PATH` or similar
-- `completion.zsh`: File will be loaded last and is expected to setup autocomplete
+- `path.zsh`: File will be loaded first and is expected to set up `$PATH` or similar
+- `completion.zsh`: File will be loaded last and is expected to set up autocomplete
 
-
-However some dotfiles are a bit special, these exsist in a special directory:
+However some dotfiles are a bit special, these exist in a special directory:
 
 - `./bin/*`: Any file in `./bin/` will get added to your `$PATH` and be made available everywhere (e.g. `subl`)
 
-The dotfiles allow to set up project aliases, these aliases are automatically loaded into your shell. To enable a project alias, create a `.alias` file in the project directory.
+The dotfiles allow setting up project aliases, these aliases are automatically loaded into your shell. To enable a project alias, create a `.alias` file in the project directory.
